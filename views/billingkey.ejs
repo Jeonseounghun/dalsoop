@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <section>
+      <h1>구매 완료</h1>
+      <img src="/images/toss-tee.png" style="max-width: 100%" />
+      <h3>토스 티셔츠</h3>
+      <p>빌링 금액: <%= billkey %></p>
+      <p>빌링 금액: <%= customerKey %></p>
+      <button class="go">이동하기</button>
+    </section>
+  </body>
+</html>
+<script>
+  $(".go").click((e) => {
+    console.log("hi");
+    var orderId = new Date().getTime();
+    window.location.href = `http://localhost:8080/billingbuy?customerKey=<%= customerKey %>&billingkey=<%= billkey %>&orderid=${orderId}`;
+  });
+</script>
