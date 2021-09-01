@@ -25,6 +25,6 @@
   $(".go").click((e) => {
     console.log("hi");
     var orderId = new Date().getTime();
-    window.location.href = `http://localhost:8080/billingbuy?customerKey=<%= customerKey %>&billingkey=<%= billkey %>&orderid=${orderId}`;
+    window.location.href = `http://3.36.130.219:8080/billingbuy?customerKey=<%= customerKey %>&billingkey=<%= billkey %>&orderid=${orderId}`;
   });
 </script>
